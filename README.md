@@ -18,3 +18,11 @@ Kullanılan Teknolojiler:
 •	Material Design: Kullanıcı arayüzü bileşenleri ve etkileşimleri için modern tasarım prensipleri.
 •	Data Binding ve View Binding: Arayüz bileşenleri ile veri modelleri arasında bağlama yaparak kodun daha temiz ve yönetilebilir olmasını sağlar.
 
+![HomePage](Screenshot_20240207_210848.png)
+![İlaç listes](Screenshot_20240207_211457.png)
+![Eczaneler](Screenshot_20240207_210953.png)
+![ilaç ekleme](Screenshot_20240207_211511.png)
+![randevular](Screenshot_20240207_211559.png)
+![user info](Screenshot_20240207_210927.png)
+![bildirim](423903658_1086758442523486_6735644796324489555_n.jpg)
+
