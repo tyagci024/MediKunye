@@ -23,6 +23,6 @@ Kullanılan Teknolojiler:
 ![Eczaneler](Screenshot_20240207_210953.png)
 ![ilaç ekleme](Screenshot_20240207_211511.png)
 ![randevular](Screenshot_20240207_211559.png)
-![user info](Screenshot_20240207_210927.png)
+![user info](Screenshot_20240213_185543.png)
 ![bildirim](423903658_1086758442523486_6735644796324489555_n.jpg)
 
