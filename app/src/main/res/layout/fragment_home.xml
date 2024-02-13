@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="HomeNesnesi"
+            type="com.example.gitdeneme.FragmentHome" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentHome"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/firstL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{() -> HomeNesnesi.callEmer()}"
+
+                app:cardCornerRadius="24dp"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_acil_bg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/emer_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ACİL DURUM ÇAĞRISI"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+
+                        android:textSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/baseline_call_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                            app:layout_constraintTop_toTopOf="@+id/textView2"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="43dp" />
+
+                        <TextView
+                            android:id="@+id/emerNumber"
+                            android:layout_weight="8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+                            android:text="05334520821"
+                            android:textAlignment="center"
+
+
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/imageView"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/firstCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="24dp"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_blood_group"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="KAN GRUBU"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <LinearLayout
+                        android:id="@+id/bloodLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pointsEarnedTextView">
+
+                        <ImageView
+                            android:id="@+id/dropBlood"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_water_drop_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/pointsTextView"
+                            app:layout_constraintTop_toTopOf="@+id/pointsTextView"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="43dp" />
+
+                        <TextView
+                            android:id="@+id/bloodGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="45678"
+                            android:textAlignment="center"
+                            android:layout_marginStart="8dp"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/coinImageView"
+                            app:layout_constraintTop_toBottomOf="@+id/pointsEarnedTextView" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/accountEdit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="24dp"
+            android:onClick="@{() -> HomeNesnesi.navigateFragmentUserInfoEdit()}"
+
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="HESAP"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:contentDescription="@null"
+                    android:src="@drawable/baseline_account_box_24" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="24dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sectionPart"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="İyi Günler"
+                        android:textColor="#8E8B8B"
+                        android:textSize="32dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/appCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/drugList"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:onClick="@{() -> HomeNesnesi.navigateFragmentDrugList()}"
+
+                        android:layout_weight="1"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#F9C74F"
+                            android:paddingStart="16dp"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:orientation="horizontal"
+                            >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="5"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="İlaçlarım"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kullanacağın ilaçları listele"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp"
+                                    android:textStyle="italic" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <ImageView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/img"/>
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/phList"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:onClick="@{() -> HomeNesnesi.navigateFragmentPharmacyList()}"
+
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#43AA8B"
+                            android:paddingStart="16dp"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:orientation="horizontal"
+                            >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nöbetçi Eczane"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yakınındaki nöbetçi eczaneleri gör"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp"
+                                    android:textStyle="italic" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <ImageView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ecz"/>
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dateList"
+                        android:onClick="@{() -> HomeNesnesi.navigateFragmentDateList()}"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#577590"
+                            android:paddingStart="16dp"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="16dp"
+                            android:orientation="horizontal"
+                            >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="5"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yaklaşan Muayeneler"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yaklaşan tedavileri gör ya da yenisini oluştur"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp"
+                                    android:textStyle="italic" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <ImageView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/baseline_local_hospital_24"/>
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</LinearLayout>
+    </layout>
